@@ -1,0 +1,15 @@
+<form [formGroup]="formTeste">
+  <mat-form-field class="example-full-width">
+    <mat-label>CPF</mat-label>
+    <input
+      [formControl]="cpfControl"
+      matInput
+      mask="000.000.000-99"
+      value="Sushi"
+    />
+  </mat-form-field>
+</form>
+<pre>
+  {{ formTeste.value | json }}
+  {{ cpfControl?.value }}
+</pre>
